@@ -1,93 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Curriculum Vitae | Joshua Drury Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>PQP Learning Portfolio | Curriculum Vitae</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+<style>
+:root {
+  --primary: #5b3fa3;
+  --secondary: #f4f1fb;
+  --accent: #8f7bdc;
+  --text-dark: #2b2b2b;
+  --text-light: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter","Segoe UI",Arial,sans-serif;
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+nav {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+.cv-section {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(128, 0, 255, 0.35);
+}
+
+.cv-section h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+.cv-item {
+  margin-bottom: 1.5rem;
+}
+
+.cv-meta {
+  color: var(--accent);
+  font-weight: 600;
+}
+</style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="logo">Joshua Drury</div>
-
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="artifacts.html">Artifacts</a>
-    <a href="cv.html" class="active">CV</a>
-  </nav>
+<header>
+  <h1>Joshua H Drury</h1>
+  <p>Curriculum Vitae</p>
 </header>
 
-<section class="hero">
-  <h1>Curriculum Vitae</h1>
-  <p>Professional Experience & Leadership Background</p>
+<nav>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About Me</a></li>
+  <li><a href="artifacts.html">Artifacts</a></li>
+  <li><a href="cv.html">Curriculum Vitae</a></li>
+</ul>
+</nav>
+
+<main>
+
+<!-- EDUCATION -->
+<section class="cv-section">
+<h2>Education</h2>
+
+<div class="cv-item">
+<strong>Ontario Institute for Studies in Education, University of Toronto</strong><br>
+Master of Teaching <span class="cv-meta">· 2016</span>
+</div>
+
+<div class="cv-item">
+<strong>York University</strong><br>
+Master of Arts in Interdisciplinary Studies <span class="cv-meta">· 2009</span><br>
+<em>Youths’ Perceptions of Acceptance and Antisocial Behaviour: An Exploration within Social Control Theory</em>
+</div>
+
+<div class="cv-item">
+<strong>York University</strong><br>
+Bachelor of Arts (Honours), Law & Society and Sociology <span class="cv-meta">· 2005</span>
+</div>
+
+<div class="cv-item">
+<strong>Seneca College of Applied Arts and Technology</strong><br>
+Honours Diploma in Police Foundations <span class="cv-meta">· 2002</span>
+</div>
+
 </section>
 
-<main class="content">
+<!-- TEACHING & SCHOOL LEADERSHIP -->
+<section class="cv-section">
+<h2>Teaching & School Leadership Experience</h2>
 
-  <section class="section">
+<div class="cv-item">
+<strong>Bialik Hebrew Day School</strong><br>
+Vice-Principal <span class="cv-meta">· 2020 – 2021</span>
+<ul>
+<li>Supported school-wide leadership during a period of significant operational and instructional complexity</li>
+<li>Worked collaboratively with administration to support staff, student well-being, and instructional continuity</li>
+<li>Assisted in supervision, mentoring, and evaluation of teaching staff</li>
+<li>Supported curriculum planning, implementation, and professional learning initiatives</li>
+</ul>
+</div>
 
-    <div class="cv-entry">
-      <h3>Education</h3>
+<div class="cv-item">
+<strong>Bialik Hebrew Day School</strong><br>
+General Studies Teacher <span class="cv-meta">· 2016 – Present</span>
+<ul>
+<li>Design and deliver inquiry-based units aligned with curriculum expectations and school priorities</li>
+<li>Assess student learning using a variety of formative and summative strategies</li>
+<li>Collaborate with colleagues through PLCs to strengthen instructional alignment and coherence</li>
+<li>Maintain ongoing communication with families and school leadership to support student success</li>
+</ul>
+</div>
 
-      <div class="cv-block">
-        <strong>OISE, University of Toronto</strong>
-        <p class="cv-meta">Master of Teaching · 2016</p>
-      </div>
+</section>
 
-      <div class="cv-block">
-        <strong>York University</strong>
-        <p class="cv-meta">Master of Arts, Interdisciplinary Studies · 2009</p>
-        <p><em>Youths’ Perceptions of Acceptance and Antisocial Behaviour</em></p>
-      </div>
+<!-- LEADERSHIP & PROGRAM DEVELOPMENT -->
+<section class="cv-section">
+<h2>Leadership & Program Development Experience</h2>
 
-      <div class="cv-block">
-        <strong>York University</strong>
-        <p class="cv-meta">BA Honours, Law & Society and Sociology · 2005</p>
-      </div>
+<div class="cv-item">
+<strong>Thornhill Karate</strong><br>
+Owner & Chief Instructor <span class="cv-meta">· 2010 – 2014</span>
+<ul>
+<li>Designed curriculum and instructional programming</li>
+<li>Led staff training, evaluation, and program delivery</li>
+<li>Oversaw organizational operations and community engagement</li>
+</ul>
+</div>
 
-      <div class="cv-block">
-        <strong>Seneca College</strong>
-        <p class="cv-meta">Honours Diploma, Police Foundations · 2002</p>
-      </div>
-    </div>
+<div class="cv-item">
+<strong>Pick Fitness Summer Camp</strong><br>
+Camp Director & Leadership Coordinator <span class="cv-meta">· 2010 – 2013</span>
+<ul>
+<li>Directed all operational aspects of a large children’s day camp</li>
+<li>Recruited, trained, supervised, and evaluated staff</li>
+<li>Designed and implemented a leadership training program for youth volunteers</li>
+</ul>
+</div>
 
-    <div class="cv-entry">
-      <h3>Teaching & School Leadership</h3>
+<div class="cv-item">
+<strong>The Ability Community Connection</strong><br>
+Fitness Instructor <span class="cv-meta">· 2011 – 2014</span>
+<ul>
+<li>Delivered inclusive programming for children with cognitive and physical exceptionalities</li>
+<li>Adapted instruction to meet diverse learner needs</li>
+</ul>
+</div>
 
-      <div class="cv-block">
-        <strong>Bialik Hebrew Day School</strong>
-        <p class="cv-meta">Vice-Principal · 2020–2021</p>
-      </div>
+</section>
 
-      <div class="cv-block">
-        <strong>Bialik Hebrew Day School</strong>
-        <p class="cv-meta">General Studies Teacher · 2016–Present</p>
-      </div>
-    </div>
+<!-- SYSTEM LEADERSHIP -->
+<section class="cv-section">
+<h2>Sport, Governance & System-Level Leadership</h2>
 
-    <div class="cv-entry">
-      <h3>Leadership & Program Development</h3>
+<div class="cv-item">
+<strong>Karate Ontario</strong><br>
+Executive Director <span class="cv-meta">· 2010 – 2013</span>
+<ul>
+<li>Led provincial sport organization operations</li>
+<li>Implemented strategic plans and delivered province-wide programming</li>
+<li>Collaborated with multiple stakeholders to support organizational goals</li>
+</ul>
+</div>
 
-      <div class="cv-block">
-        <strong>Thornhill Karate</strong>
-        <p class="cv-meta">Owner & Chief Instructor · 2010–2014</p>
-      </div>
+<div class="cv-item">
+<strong>Karate Canada</strong><br>
+Program Manager <span class="cv-meta">· 2013 – 2014</span>
+</div>
 
-      <div class="cv-block">
-        <strong>Pick Fitness Summer Camp</strong>
-        <p class="cv-meta">Camp Director · 2010–2013</p>
-      </div>
-    </div>
+<div class="cv-item">
+<strong>Toronto 2015 Pan & ParaPan American Games</strong><br>
+Sport Coordinator <span class="cv-meta">· 2014</span>
+</div>
 
-  </section>
+<div class="cv-item">
+<strong>Governance Roles (Previously Held)</strong>
+<ul>
+<li>Vice-President, Shotokan Karate International Federation Canada</li>
+<li>Chair, Committee for Athletes with a Disability, Karate Canada</li>
+<li>Commissioner for Karate and the Disabled, Karate Ontario</li>
+<li>Secretary, Karate Ontario Board of Directors</li>
+</ul>
+</div>
+
+</section>
+
+<!-- AWARDS -->
+<section class="cv-section">
+<h2>Awards & Recognition</h2>
+<ul>
+<li>Faculty of Arts Academic Achievement List, York University</li>
+<li>York University Continuing Student Scholarship</li>
+<li>President’s Honour List, Seneca College</li>
+</ul>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section class="cv-section">
+<h2>Qualifications & Certifications</h2>
+
+<strong>Ontario College of Teachers</strong>
+<ul>
+<li>Primary & Junior Divisions</li>
+<li>Intermediate Division – Mathematics</li>
+</ul>
+
+<strong>Additional Qualifications</strong>
+<ul>
+<li>Mathematics, Primary & Junior, Part 1</li>
+</ul>
+
+<strong>Certifications</strong>
+<ul>
+<li>National Coaching Certification Program (Levels 1 & 2)</li>
+<li>Competition Development (in progress)</li>
+</ul>
+
+</section>
 
 </main>
 
-<footer class="footer">
-  <p>© 2026 Joshua Drury | PQP Learning Portfolio</p>
+<footer>
+© 2026 Joshua Drury | PQP Learning Portfolio
 </footer>
 
 </body>
