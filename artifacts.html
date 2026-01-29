@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* SAME STYLE — DO NOT REMOVE */
 :root {
   --primary: #5b3fa3;
   --secondary: #f4f1fb;
@@ -14,52 +13,86 @@
   --text-dark: #2b2b2b;
   --text-light: #ffffff;
 }
+
 body {
   margin: 0;
   font-family: "Inter","Segoe UI",Arial,sans-serif;
   background-color: var(--secondary);
   color: var(--text-dark);
+  line-height: 1.6;
 }
+
 header {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   padding: 3rem 1.5rem;
   text-align: center;
 }
+
 nav {
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 2rem;
   padding: 0.75rem;
+  margin: 0;
 }
+
 nav a {
   text-decoration: none;
   color: var(--primary);
   font-weight: 600;
 }
+
 main {
   max-width: 1000px;
   margin: auto;
   padding: 3rem 1.5rem;
 }
-h2 {
-  color: var(--primary);
-  border-bottom: 3px solid var(--accent);
-  display: inline-block;
-  margin-bottom: 1rem;
-}
-.card {
-  background: white;
-  padding: 1.75rem;
+
+details {
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1.5rem;
 }
+
+summary {
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 1rem 0;
+  list-style: none;
+}
+
+summary::marker {
+  display: none;
+}
+
+summary::after {
+  content: "▼";
+  float: right;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.details-content {
+  padding-bottom: 1.5rem;
+}
+
 footer {
   background: var(--primary);
   color: white;
@@ -72,43 +105,47 @@ footer {
 <body>
 
 <header>
-<h1>Leadership Artifacts</h1>
-<p>Evidence of practice aligned with the Ontario Leadership Framework</p>
+  <h1>Leadership Artifacts</h1>
+  <p>Evidence of practice aligned with the Ontario Leadership Framework</p>
 </header>
 
 <nav>
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Me</a></li>
-<li><a href="artifacts.html">Artifacts</a></li>
-<li><a href="cv.html">Curriculum Vitae</a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About Me</a></li>
+  <li><a href="artifacts.html">Artifacts</a></li>
+  <li><a href="cv.html">Curriculum Vitae</a></li>
 </ul>
 </nav>
 
 <main>
 
-<div class="card">
-<h2>Artifact 1: PLC Leadership – Math & Coding</h2>
+<details>
+<summary>Artifact 1: PLC Leadership – Math Curriculum & Coding</summary>
+<div class="details-content">
 <p><strong>Evidence</strong><br>
 Led a Professional Learning Community to revise the mathematics curriculum to include coding.
-Supported staff through initial hesitation by modeling lessons, co-learning, and using a guided
-slideshow during PLC sessions.</p>
+Supported staff through initial hesitation by modelling lessons, co-learning, and guided
+instruction using a PLC slideshow.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Setting Directions · Building Relationships and Developing People · Leading the Instructional Program</p>
 
 <p><strong>Reflection</strong><br>
-How did my leadership approach reduce staff anxiety around unfamiliar content?
-What strategies were most effective in building collective efficacy?</p>
+How did my leadership respond to staff hesitation with unfamiliar content?
+What strategies most effectively built confidence and collective efficacy?</p>
 
 <p><strong>Impact</strong><br>
-Teachers developed confidence in teaching coding and collaboratively embedded it into curriculum planning.</p>
+Teachers developed confidence with coding concepts and embedded them into curriculum planning.</p>
 </div>
+</details>
 
-<div class="card">
-<h2>Artifact 2: PLC Unit Deliverables</h2>
+<details>
+<summary>Artifact 2: PLC Unit Deliverables</summary>
+<div class="details-content">
 <p><strong>Evidence</strong><br>
-Samples of collaboratively developed unit plans and assessments created during the PLC process.</p>
+Samples of collaboratively developed unit plans and assessments created by teachers during
+the PLC process.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Leading the Instructional Program · Developing the Organization</p>
@@ -117,44 +154,51 @@ Leading the Instructional Program · Developing the Organization</p>
 What do these deliverables reveal about shared ownership and instructional alignment?</p>
 
 <p><strong>Impact</strong><br>
-Improved coherence across grade-level programming and instructional consistency.</p>
+Increased instructional coherence across grades.</p>
 </div>
+</details>
 
-<div class="card">
-<h2>Artifact 3: Teacher Coding Game Projects</h2>
+<details>
+<summary>Artifact 3: Teacher Coding Game Projects</summary>
+<div class="details-content">
 <p><strong>Evidence</strong><br>
-Final coding games created by teacher pairs demonstrating applied learning.</p>
+Final coding projects created by teacher pairs demonstrating applied learning through game design.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Leading the Instructional Program · Building Relationships and Developing People</p>
 
 <p><strong>Reflection</strong><br>
-How did experiential learning influence teacher confidence and willingness to take instructional risks?</p>
+How did experiential learning influence teacher confidence and instructional risk-taking?</p>
 
 <p><strong>Impact</strong><br>
 Teachers transferred learning directly into classroom practice.</p>
 </div>
+</details>
 
-<div class="card">
-<h2>Artifact 4: PD Leadership – Securly Classroom</h2>
+<details>
+<summary>Artifact 4: PD Leadership – Securly Classroom</summary>
+<div class="details-content">
 <p><strong>Evidence</strong><br>
-Led professional development on the use of Securly Classroom to improve engagement and on-task behaviour
-in a dual-language school environment.</p>
+Designed and led professional development on Securly Classroom to support engagement and
+on-task behaviour in a dual-language school environment.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Managing the Organization · Leading the Instructional Program</p>
 
 <p><strong>Reflection</strong><br>
-How did this PD balance instructional leadership with classroom management needs?</p>
+How did this PD balance classroom management with instructional leadership?</p>
 
 <p><strong>Impact</strong><br>
-Increased instructional time and improved classroom focus.</p>
+Improved engagement and instructional time.</p>
 </div>
+</details>
 
-<div class="card">
-<h2>Artifact 5: Mentorship of New Staff</h2>
+<details>
+<summary>Artifact 5: Mentorship of New Staff</summary>
+<div class="details-content">
 <p><strong>Evidence</strong><br>
-Provided mentorship to new staff over ten years, supporting professional growth and integration.</p>
+Mentored new staff over a ten-year period, supporting professional growth and integration
+into established school culture.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Building Relationships and Developing People</p>
@@ -163,28 +207,33 @@ Building Relationships and Developing People</p>
 What leadership practices supported long-term staff success and retention?</p>
 
 <p><strong>Impact</strong><br>
-Strong collaborative culture and sustained staff development.</p>
+Strengthened professional relationships and collaborative culture.</p>
 </div>
+</details>
 
-<div class="card">
-<h2>Artifact 6: House Dean – Student Agency</h2>
+<details>
+<summary>Artifact 6: House Dean – Student Agency & Community</summary>
+<div class="details-content">
 <p><strong>Evidence</strong><br>
-Built community through student co-developed programs that emphasized voice and agency.</p>
+Developed student-centered programs as House Dean, co-created with students to promote
+voice, agency, and belonging.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Building Relationships and Developing People · Setting Directions</p>
 
 <p><strong>Reflection</strong><br>
-How did shared leadership with students strengthen engagement and belonging?</p>
+How did shared leadership with students enhance engagement and community?</p>
 
 <p><strong>Impact</strong><br>
 Increased student ownership and school connectedness.</p>
 </div>
+</details>
 
-<div class="card">
-<h2>Artifact 7: Student-Led Talent Show</h2>
+<details>
+<summary>Artifact 7: Student-Led Talent Show</summary>
+<div class="details-content">
 <p><strong>Evidence</strong><br>
-Organized and hosted a talent show driven by student leadership.</p>
+Organized and hosted a talent show driven by student leadership and initiative.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Developing the Organization · Building Relationships and Developing People</p>
@@ -195,6 +244,7 @@ How did empowering students as leaders influence school culture?</p>
 <p><strong>Impact</strong><br>
 Strengthened community pride and student engagement.</p>
 </div>
+</details>
 
 </main>
 
