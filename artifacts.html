@@ -168,6 +168,30 @@ footer {
   cursor: pointer;
   user-select: none;
 }
+/* --- ARTIFACT IMAGE SIZE + BORDER --- */
+
+/* --- ARTIFACT IMAGE SIZE + BORDER + POLISH --- */
+
+.artifact-image {
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+
+  border: 1mm solid var(--primary);
+  border-radius: 8px;
+
+  transition: all 0.2s ease;
+}
+
+.artifact-image:hover {
+  box-shadow: 0 4px 12px rgba(91, 63, 163, 0.3);
+  transform: scale(1.02);
+}
+
+}
 
 </style>
 </head>
