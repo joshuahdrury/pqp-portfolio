@@ -131,6 +131,43 @@ footer {
   display: block;
   object-fit: contain;
 }
+/* --- CLICK TO EXPAND IMAGE MODAL --- */
+
+.artifact-image {
+  cursor: pointer;
+}
+
+/* Modal overlay */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Modal image */
+.image-modal img {
+  max-width: 95%;
+  max-height: 90vh;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+}
 
 </style>
 </head>
@@ -187,11 +224,21 @@ Teachers developed confidence with coding concepts and embedded them into curric
   
   <div class="artifact-content">
     <img 
-      src="images/MathCodingGrade6UnitPlan.jpg" 
-      alt="Grade 6 Math and Coding Fundamentals Unit Plan" 
-      class="artifact-image"
-    >
-    
+  src="images/MathCodingGrade6UnitPlan.jpg" 
+  alt="Grade 6 Math and Coding Fundamentals Unit Plan" 
+  class="artifact-image"
+  onclick="document.getElementById('imgModal').style.display='flex'"
+>
+
+    <div class="image-modal" id="imgModal" onclick="this.style.display='none'">
+
+  <span class="close-modal">&times;</span>
+  <img
+    src="images/MathCodingGrade6UnitPlan.jpg"
+    alt="Expanded view of Grade 6 Math and Coding Fundamentals Unit Plan"
+  >
+</div>
+
     <p class="artifact-description">
       This artifact demonstrates the integration of coding concepts into the Grade 6 mathematics curriculum. 
       The lesson focuses on algorithms, sequencing, and problem-solving through unplugged coding activities, 
