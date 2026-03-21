@@ -59,12 +59,23 @@ main {
   padding: 3rem 1.5rem;
 }
 
-/* PROFILE IMAGE (FIXED + CENTERED) */
+/* ABOUT CARD */
+.about-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+/* PROFILE IMAGE WRAP */
 .profile-image {
   width: 250px;
-  max-width: 60%;
-  display: block;
-  margin: 0 auto 2rem auto;
+  max-width: 40%;
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
   border-radius: 12px;
   border: 3px solid var(--primary);
   cursor: pointer;
@@ -102,20 +113,13 @@ main {
   cursor: pointer;
 }
 
-.about-card {
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
 footer {
   background: var(--primary);
   color: white;
   text-align: center;
   padding: 1.5rem;
 }
+
 </style>
 </head>
 
@@ -137,17 +141,11 @@ footer {
 
 <main>
 
-<!-- SINGLE CLEAN IMAGE -->
-<img src="images/joshua.jpg" class="profile-image"
-onclick="document.getElementById('profileModal').style.display='flex'">
-
-<!-- MODAL (PROPERLY CLOSED) -->
-<div class="image-modal" id="profileModal" onclick="this.style.display='none'">
-  <span class="close-modal">&times;</span>
-  <img src="images/joshua.jpg">
-</div>
-
 <div class="about-card">
+  <!-- IMAGE LEFT WITH TEXT WRAP -->
+  <img src="images/joshua.jpg" class="profile-image"
+       onclick="document.getElementById('profileModal').style.display='flex'">
+
   <p>
     I am an educator and school leader with experience spanning classroom instruction, curriculum development, 
     professional learning communities, and school administration. My professional journey has been shaped by 
@@ -178,6 +176,12 @@ onclick="document.getElementById('profileModal').style.display='flex'">
     I enjoy hiking and rock climbing as ways to promote both physical and mental well-being. These activities 
     reinforce resilience, balance, and perseverance; qualities that also inform my leadership and educational practice.
   </p>
+</div>
+
+<!-- MODAL -->
+<div class="image-modal" id="profileModal" onclick="this.style.display='none'">
+  <span class="close-modal">&times;</span>
+  <img src="images/joshua.jpg">
 </div>
 
 </main>
