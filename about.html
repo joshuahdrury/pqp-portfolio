@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Leadership Portfolio | About Me</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
@@ -59,6 +59,49 @@ main {
   padding: 3rem 1.5rem;
 }
 
+/* PROFILE IMAGE (FIXED + CENTERED) */
+.profile-image {
+  width: 250px;
+  max-width: 60%;
+  display: block;
+  margin: 0 auto 2rem auto;
+  border-radius: 12px;
+  border: 3px solid var(--primary);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* MODAL */
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+}
+
 .about-card {
   background: #ffffff;
   border-radius: 10px;
@@ -73,7 +116,6 @@ footer {
   text-align: center;
   padding: 1.5rem;
 }
-
 </style>
 </head>
 
@@ -95,14 +137,16 @@ footer {
 
 <main>
 
-<img src="images/joshua.jpg" class="artifact-image"
-onclick="document.getElementById('m3').style.display='flex'">
+<!-- SINGLE CLEAN IMAGE -->
+<img src="images/joshua.jpg" class="profile-image"
+onclick="document.getElementById('profileModal').style.display='flex'">
 
-<div class="image-modal" id="m3" onclick="this.style.display='none'">
-<span class="close-modal">&times;</span>
-<img src="images/joshua.jpg">
+<!-- MODAL (PROPERLY CLOSED) -->
+<div class="image-modal" id="profileModal" onclick="this.style.display='none'">
+  <span class="close-modal">&times;</span>
+  <img src="images/joshua.jpg">
+</div>
 
-  
 <div class="about-card">
   <p>
     I am an educator and school leader with experience spanning classroom instruction, curriculum development, 
