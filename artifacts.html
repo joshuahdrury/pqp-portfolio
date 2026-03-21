@@ -73,18 +73,11 @@ summary {
   font-weight: 600;
   color: var(--primary);
   padding: 1rem 0;
-  list-style: none;
-}
-
-summary::marker {
-  display: none;
 }
 
 summary::after {
   content: "▼";
   float: right;
-  font-size: 0.9rem;
-  transition: transform 0.2s ease;
 }
 
 details[open] summary::after {
@@ -95,29 +88,13 @@ details[open] summary::after {
   padding-bottom: 1.5rem;
 }
 
-footer {
-  background: var(--primary);
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-/* IMAGE + MODAL */
-
 .artifact-image {
   width: 50%;
-  max-width: 50%;
   margin: 1rem auto;
   display: block;
   cursor: pointer;
   border: 1mm solid var(--primary);
   border-radius: 8px;
-  transition: 0.2s ease;
-}
-
-.artifact-image:hover {
-  box-shadow: 0 4px 12px rgba(91, 63, 163, 0.3);
-  transform: scale(1.02);
 }
 
 .image-modal {
@@ -127,14 +104,12 @@ footer {
   background: rgba(0,0,0,0.85);
   justify-content: center;
   align-items: center;
-  padding: 2rem;
   z-index: 999;
 }
 
 .image-modal img {
   max-width: 95%;
   max-height: 90vh;
-  border-radius: 10px;
 }
 
 .close-modal {
@@ -146,13 +121,10 @@ footer {
   cursor: pointer;
 }
 
-/* Slides */
-
 .slides-embed {
   position: relative;
   padding-top: 56.25%;
   height: 0;
-  overflow: hidden;
   margin: 1.5rem 0;
 }
 
@@ -161,34 +133,41 @@ footer {
   width: 100%;
   height: 100%;
 }
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Leadership Artifacts</h1>
-  <p>Evidence of practice aligned with the Ontario Leadership Framework</p>
+<h1>Leadership Artifacts</h1>
+<p>Evidence of practice aligned with the Ontario Leadership Framework</p>
 </header>
 
 <nav>
 <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About Me</a></li>
-  <li><a href="artifacts.html">Artifacts</a></li>
-  <li><a href="cv.html">Curriculum Vitae</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="artifacts.html">Artifacts</a></li>
+<li><a href="cv.html">Curriculum Vitae</a></li>
 </ul>
 </nav>
 
 <main>
 
-<!-- ARTIFACT 1 (UNCHANGED) -->
+<!-- ARTIFACT 1 -->
 <details>
 <summary>Artifact 1: PLC Leadership – Math Curriculum & Coding</summary>
 <div class="details-content">
 
 <p><strong>Evidence</strong><br>
-Led a Professional Learning Community...</p>
+Led a Professional Learning Community to revise the mathematics curriculum to include coding...</p>
 
 <div class="slides-embed">
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQDZ3TLr_KjlJxZJqZ-4NuxKg9e52hzA2ehsoM6QSxijuqa3ofZyasmFoQMghMKUVZvaaJSi6SvDrJZ/pubembed"></iframe>
@@ -198,16 +177,41 @@ Led a Professional Learning Community...</p>
 Setting Directions · Building Relationships and Developing People · Leading the Instructional Program</p>
 
 <p><strong>Reflection</strong><br>
-I responded to staff hesitation...</p>
+I responded to staff hesitation by prioritizing psychological safety...</p>
 
 <p><strong>Impact</strong><br>
-Teachers developed confidence...</p>
+Teachers developed confidence with coding concepts and embedded them into curriculum planning.</p>
 
 </div>
 </details>
 
-<!-- ARTIFACT 2 (UNCHANGED) -->
-<!-- KEEP YOUR EXISTING ARTIFACT 2 HERE -->
+<!-- ARTIFACT 2 -->
+<details>
+<summary>Artifact 2: PLC Unit Deliverables</summary>
+<div class="details-content">
+
+<img src="images/MathCodingGrade6UnitPlan.jpg" class="artifact-image"
+onclick="document.getElementById('m2').style.display='flex'">
+
+<div class="image-modal" id="m2" onclick="this.style.display='none'">
+<span class="close-modal">&times;</span>
+<img src="images/MathCodingGrade6UnitPlan.jpg">
+</div>
+
+<p><strong>Evidence</strong><br>
+Samples of collaboratively developed unit plans...</p>
+
+<p><strong>OLF Alignment</strong><br>
+Leading the Instructional Program · Developing the Organization</p>
+
+<p><strong>Reflection</strong><br>
+The unit plans and assessments produced through the PLC process highlight...</p>
+
+<p><strong>Impact</strong><br>
+Increased instructional coherence across grades.</p>
+
+</div>
+</details>
 
 <!-- ARTIFACT 3 -->
 <details>
@@ -223,16 +227,16 @@ onclick="document.getElementById('m3').style.display='flex'">
 </div>
 
 <p><strong>Evidence</strong><br>
-All mathematics teachers collaboratively created coding-based games...</p>
+All mathematics teachers collaboratively designed and created coding-based games as a culminating PLC task.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Leading the Instructional Program · Building Relationships and Developing People</p>
 
 <p><strong>Reflection</strong><br>
-The culminating game design project shifted professional learning...</p>
+This experiential task increased confidence, reduced fear, and supported risk-taking.</p>
 
 <p><strong>Impact</strong><br>
-All teachers successfully implemented coding...</p>
+Coding is now consistently integrated across math classrooms.</p>
 
 </div>
 </details>
@@ -251,21 +255,34 @@ onclick="document.getElementById('m4').style.display='flex'">
 </div>
 
 <p><strong>Evidence</strong><br>
-Designed and led two professional development sessions...</p>
+Led two PD sessions on Securly Classroom.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Managing the Organization · Leading the Instructional Program</p>
 
 <p><strong>Reflection</strong><br>
-The sessions were structured...</p>
+Focused on practical application and teacher confidence.</p>
 
 <p><strong>Impact</strong><br>
-All middle school teachers are now confident...</p>
+All teachers now use the platform effectively.</p>
 
 </div>
 </details>
 
-<!-- ARTIFACT 5 (UNCHANGED) -->
+<!-- ARTIFACT 5 -->
+<details>
+<summary>Artifact 5: Mentorship of New Staff</summary>
+<div class="details-content">
+<p><strong>Evidence</strong><br>
+Mentored new staff over a ten-year period...</p>
+<p><strong>OLF Alignment</strong><br>
+Building Relationships and Developing People</p>
+<p><strong>Reflection</strong><br>
+What leadership practices supported long-term staff success?</p>
+<p><strong>Impact</strong><br>
+Strengthened collaborative culture.</p>
+</div>
+</details>
 
 <!-- ARTIFACT 6 -->
 <details>
@@ -281,16 +298,16 @@ onclick="document.getElementById('m6').style.display='flex'">
 </div>
 
 <p><strong>Evidence</strong><br>
-Supported students in planning, organizing, and hosting...</p>
+Supported students in planning and leading a school-wide talent show.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Developing the Organization · Building Relationships and Developing People</p>
 
 <p><strong>Reflection</strong><br>
-By shifting from a directive role...</p>
+Students were empowered through shared leadership.</p>
 
 <p><strong>Impact</strong><br>
-Increased student voice...</p>
+Increased engagement and school connectedness.</p>
 
 </div>
 </details>
@@ -301,16 +318,16 @@ Increased student voice...</p>
 <div class="details-content">
 
 <p><strong>Evidence</strong><br>
-Actively model and promote work-life balance...</p>
+Promote work-life balance among staff.</p>
 
 <p><strong>OLF Alignment</strong><br>
 Setting Directions · Building Relationships and Developing People</p>
 
 <p><strong>Reflection</strong><br>
-Sustainable leadership requires...</p>
+Modelled sustainable leadership practices.</p>
 
 <p><strong>Impact</strong><br>
-Improved staff morale...</p>
+Improved staff well-being.</p>
 
 </div>
 </details>
@@ -319,10 +336,14 @@ Improved staff morale...</p>
 <details>
 <summary>Artifact 8: Assessment and Evaluation for Learning</summary>
 <div class="details-content">
-
 <p><strong>Evidence</strong><br>
 Development of a school-wide assessment framework...</p>
-
+<p><strong>OLF Alignment</strong><br>
+Leading the Instructional Program · Developing the Organization · Setting Directions</p>
+<p><strong>Reflection</strong><br>
+Aligning assessment with research and policy...</p>
+<p><strong>Impact</strong><br>
+Improved instructional coherence.</p>
 </div>
 </details>
 
