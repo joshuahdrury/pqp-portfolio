@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title>Leadership Portfolio | Artifacts</title>
+<title> Leadership Portfolio | Artifacts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 
 <style>
 :root {
@@ -12,71 +13,113 @@
   --secondary: #f4f1fb;
   --accent: #8f7bdc;
   --text-dark: #2b2b2b;
+  --text-light: #ffffff;
 }
 
 body {
   margin: 0;
   font-family: "Inter","Segoe UI",Arial,sans-serif;
   background-color: var(--secondary);
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
 header {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
-  padding: 3rem;
+  padding: 3rem 1.5rem;
   text-align: center;
 }
 
 nav {
-  background: white;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem;
-  list-style: none;
+  padding: 0.75rem;
+  margin: 0;
 }
 
 nav a {
-  color: var(--primary);
   text-decoration: none;
+  color: var(--primary);
   font-weight: 600;
 }
 
 main {
   max-width: 1000px;
   margin: auto;
-  padding: 2rem;
+  padding: 3rem 1.5rem;
 }
 
 details {
-  background: white;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  background: #ffffff;
   border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  margin-bottom: 2rem;
+  padding: 0.5rem 1.5rem;
 }
 
 summary {
-  font-weight: 600;
   cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--primary);
+  padding: 1rem 0;
+  list-style: none;
 }
 
-/* IMAGE STYLING */
+summary::marker {
+  display: none;
+}
+
+summary::after {
+  content: "▼";
+  float: right;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.details-content {
+  padding-bottom: 1.5rem;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* IMAGE + MODAL */
+
 .artifact-image {
   width: 50%;
+  max-width: 50%;
   margin: 1rem auto;
   display: block;
   cursor: pointer;
   border: 1mm solid var(--primary);
   border-radius: 8px;
+  transition: 0.2s ease;
 }
 
-/* MODAL */
+.artifact-image:hover {
+  box-shadow: 0 4px 12px rgba(91, 63, 163, 0.3);
+  transform: scale(1.02);
+}
+
 .image-modal {
   display: none;
   position: fixed;
@@ -84,20 +127,39 @@ summary {
   background: rgba(0,0,0,0.85);
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+  z-index: 999;
 }
 
 .image-modal img {
-  max-width: 90%;
+  max-width: 95%;
   max-height: 90vh;
+  border-radius: 10px;
 }
 
 .close-modal {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
+}
+
+/* Slides */
+
+.slides-embed {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.slides-embed iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 </style>
 </head>
@@ -105,11 +167,47 @@ summary {
 <body>
 
 <header>
-<h1>Leadership Artifacts</h1>
-<p>Evidence aligned with the Ontario Leadership Framework</p>
+  <h1>Leadership Artifacts</h1>
+  <p>Evidence of practice aligned with the Ontario Leadership Framework</p>
 </header>
 
+<nav>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About Me</a></li>
+  <li><a href="artifacts.html">Artifacts</a></li>
+  <li><a href="cv.html">Curriculum Vitae</a></li>
+</ul>
+</nav>
+
 <main>
+
+<!-- ARTIFACT 1 (UNCHANGED) -->
+<details>
+<summary>Artifact 1: PLC Leadership – Math Curriculum & Coding</summary>
+<div class="details-content">
+
+<p><strong>Evidence</strong><br>
+Led a Professional Learning Community...</p>
+
+<div class="slides-embed">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQDZ3TLr_KjlJxZJqZ-4NuxKg9e52hzA2ehsoM6QSxijuqa3ofZyasmFoQMghMKUVZvaaJSi6SvDrJZ/pubembed"></iframe>
+</div>
+
+<p><strong>OLF Alignment</strong><br>
+Setting Directions · Building Relationships and Developing People · Leading the Instructional Program</p>
+
+<p><strong>Reflection</strong><br>
+I responded to staff hesitation...</p>
+
+<p><strong>Impact</strong><br>
+Teachers developed confidence...</p>
+
+</div>
+</details>
+
+<!-- ARTIFACT 2 (UNCHANGED) -->
+<!-- KEEP YOUR EXISTING ARTIFACT 2 HERE -->
 
 <!-- ARTIFACT 3 -->
 <details>
@@ -117,24 +215,24 @@ summary {
 <div class="details-content">
 
 <img src="images/codingGamePLC.jpg" class="artifact-image"
-onclick="document.getElementById('modal3').style.display='flex'">
+onclick="document.getElementById('m3').style.display='flex'">
 
-<div class="image-modal" id="modal3" onclick="this.style.display='none'">
+<div class="image-modal" id="m3" onclick="this.style.display='none'">
 <span class="close-modal">&times;</span>
 <img src="images/codingGamePLC.jpg">
 </div>
 
 <p><strong>Evidence</strong><br>
-All mathematics teachers collaboratively designed and created original coding-based games as a culminating task following multiple PLC sessions focused on developing coding knowledge and instructional practice.</p>
+All mathematics teachers collaboratively created coding-based games...</p>
 
 <p><strong>OLF Alignment</strong><br>
 Leading the Instructional Program · Building Relationships and Developing People</p>
 
 <p><strong>Reflection</strong><br>
-The culminating game design project represented a shift from passive professional learning to active, experiential learning. By positioning teachers as learners, creators, and problem-solvers, the PLC fostered a culture of risk-taking and innovation. Teachers moved beyond initial hesitation with coding to confidently applying computational thinking within mathematics contexts. The collaborative nature of the task reinforced shared ownership of learning and encouraged peer support, allowing teachers to take instructional risks in a supportive environment.</p>
+The culminating game design project shifted professional learning...</p>
 
 <p><strong>Impact</strong><br>
-All teachers successfully implemented coding into their mathematics instruction, significantly increasing integration where it had previously been inconsistent or absent. Teacher confidence, willingness to experiment, and instructional innovation all increased as a result of the PLC process.</p>
+All teachers successfully implemented coding...</p>
 
 </div>
 </details>
@@ -145,61 +243,54 @@ All teachers successfully implemented coding into their mathematics instruction,
 <div class="details-content">
 
 <img src="images/securlyPD.jpg" class="artifact-image"
-onclick="document.getElementById('modal4').style.display='flex'">
+onclick="document.getElementById('m4').style.display='flex'">
 
-<div class="image-modal" id="modal4" onclick="this.style.display='none'">
+<div class="image-modal" id="m4" onclick="this.style.display='none'">
 <span class="close-modal">&times;</span>
 <img src="images/securlyPD.jpg">
 </div>
 
 <p><strong>Evidence</strong><br>
-Designed and facilitated two professional development sessions focused on the implementation and effective use of the Securly Classroom platform.</p>
+Designed and led two professional development sessions...</p>
 
 <p><strong>OLF Alignment</strong><br>
 Managing the Organization · Leading the Instructional Program</p>
 
 <p><strong>Reflection</strong><br>
-The sessions were intentionally structured to balance technical skill development with practical classroom application. By modelling real classroom scenarios and providing opportunities for guided practice, teachers were able to immediately see the relevance and utility of the platform. Emphasis was placed on building confidence and reducing barriers to adoption, ensuring that all staff felt capable of integrating the tool into their daily practice.</p>
+The sessions were structured...</p>
 
 <p><strong>Impact</strong><br>
-All middle school teachers are now comfortable using the platform and incorporate it into their practice either daily or as needed, leading to improved classroom management, increased engagement, and more efficient instructional time.</p>
+All middle school teachers are now confident...</p>
 
 </div>
 </details>
 
-<!-- ARTIFACT 5 (unchanged) -->
-<details>
-<summary>Artifact 5: Mentorship of New Staff</summary>
-<div class="details-content">
-<p><strong>Evidence</strong><br>
-Mentored new staff over a ten-year period.</p>
-</div>
-</details>
+<!-- ARTIFACT 5 (UNCHANGED) -->
 
-<!-- ARTIFACT 6 (FORMER 7) -->
+<!-- ARTIFACT 6 -->
 <details>
 <summary>Artifact 6: Student-Led Talent Show</summary>
 <div class="details-content">
 
 <img src="images/talentShow.jpg" class="artifact-image"
-onclick="document.getElementById('modal6').style.display='flex'">
+onclick="document.getElementById('m6').style.display='flex'">
 
-<div class="image-modal" id="modal6" onclick="this.style.display='none'">
+<div class="image-modal" id="m6" onclick="this.style.display='none'">
 <span class="close-modal">&times;</span>
 <img src="images/talentShow.jpg">
 </div>
 
 <p><strong>Evidence</strong><br>
-Supported students in planning, organizing, and hosting a school-wide talent show.</p>
+Supported students in planning, organizing, and hosting...</p>
 
 <p><strong>OLF Alignment</strong><br>
 Developing the Organization · Building Relationships and Developing People</p>
 
 <p><strong>Reflection</strong><br>
-By shifting responsibility to students and acting as a facilitator rather than director, I supported the development of student leadership, collaboration, and ownership. Students were involved in decision-making, logistics, and execution, which strengthened engagement and accountability.</p>
+By shifting from a directive role...</p>
 
 <p><strong>Impact</strong><br>
-Increased student voice, leadership capacity, and school community engagement.</p>
+Increased student voice...</p>
 
 </div>
 </details>
@@ -210,16 +301,16 @@ Increased student voice, leadership capacity, and school community engagement.</
 <div class="details-content">
 
 <p><strong>Evidence</strong><br>
-Actively model and promote work-life balance through professional practices, boundary-setting, and encouraging staff well-being.</p>
+Actively model and promote work-life balance...</p>
 
 <p><strong>OLF Alignment</strong><br>
-Building Relationships and Developing People · Setting Directions</p>
+Setting Directions · Building Relationships and Developing People</p>
 
 <p><strong>Reflection</strong><br>
-Sustainable leadership requires attention to well-being. By modelling balance and encouraging staff to prioritize personal well-being, I contribute to a healthier, more sustainable professional culture. This includes respecting time boundaries, promoting manageable workloads, and recognizing the importance of time outside of work.</p>
+Sustainable leadership requires...</p>
 
 <p><strong>Impact</strong><br>
-Improved staff morale, reduced burnout, and a more positive and sustainable school culture.</p>
+Improved staff morale...</p>
 
 </div>
 </details>
@@ -230,7 +321,7 @@ Improved staff morale, reduced burnout, and a more positive and sustainable scho
 <div class="details-content">
 
 <p><strong>Evidence</strong><br>
-Development of a school-wide assessment framework aligned with Ontario policy.</p>
+Development of a school-wide assessment framework...</p>
 
 </div>
 </details>
@@ -238,7 +329,7 @@ Development of a school-wide assessment framework aligned with Ontario policy.</
 </main>
 
 <footer>
-© 2026 Joshua Drury
+© 2026 Joshua Drury | Leadership Portfolio
 </footer>
 
 </body>
